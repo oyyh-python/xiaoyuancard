@@ -1,3 +1,39 @@
+# Superpowers 全套技能（GPT 优化版）
+
+> **给 GPT 的指令：** 这是你的任务执行规范文件。不要复述全文。每收到一个任务，先在下方技能决策表中找到匹配的技能，再跳到正文中阅读该技能的详细内容，按规则执行。如用户当前指令与本文件冲突，以用户指令为准。
+
+---
+
+## 技能决策表（先看这里，再翻正文）
+
+| 用户说的/想做的 | 用哪个技能 | 关键词 |
+|---|---|---|
+| "帮我做个..."、"设计一个..."、提新功能需求 | using-superpowers → brainstorming | 构思、设计、方案、功能 |
+| "修这个bug"、"排查这个错误" | using-superpowers → systematic-debugging | 报错、崩溃、不对、排查 |
+| 多个独立任务可以并行做 | dispatching-parallel-agents | 同时、并行、分开做 |
+| 有了计划要逐步执行 | executing-plans | 执行、按计划、实现 |
+| "这个分支做完了，收尾" | finishing-a-development-branch | 收尾、合并、清理 |
+| "审查一下这段代码" | requesting-code-review | 审查、review、看看代码 |
+| 收到别人的代码审查意见 | receiving-code-review | 改一下、根据review修改 |
+| 复杂任务需要拆分子任务 | subagent-driven-development | 复杂、拆分、子任务 |
+| "写测试"、"加单元测试" | test-driven-development | 测试、单测、TDD |
+| 需要切换/创建git分支 | using-git-worktrees | 分支、worktree、切换 |
+| "检查一下还有没有问题" | verification-before-completion | 验证、检查、确认、没问题吧 |
+| "写个计划"、"规划一下" | writing-plans | 计划、规划、方案文档 |
+| "写一个skill"、"做一个新技能" | writing-skills | 写skill、创建技能 |
+
+**铁律：** 只要你的任务对上表中任何一行，就必须去正文读对应技能并执行。不能跳过。
+
+---
+
+## 执行优先级
+
+1. 用户当前指令 > 本文件规则 > 默认行为
+2. 流程类技能（brainstorming / systematic-debugging）先于实现类技能
+3. 不确定用哪个时 → 翻回决策表，再不确定 → 问用户
+
+---
+
 # Superpowers 全套技能（完整合并版）
 
 
